@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=A, initial-scale=1.0">
     <title>form</title>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+    </style>
 </head>
 <body>
     <p align="center"><b>T4TEQ Software Solutions</b></p>
@@ -11,22 +16,30 @@
 
     <form action="#" type="post" align="center">
         <p align="right"><label>date:</label><input type="date"></p>
-        <p><label>Reg NO:</label><input type="tel"></p>
+        <p><label>Reg NO:</label><input type="text" placeholder="enter reg no." pattern="[0-9]+" required></p>
         <p><label>Password</label><input type="password"></p>
         <p><label>intime:</label><input type="time"></p>
         <p><label>ontime:</label><input type="time"></p>
         <p><label>course details</label><input type="checkbox" value="HTML"><label>HTML</label><input type="checkbox" value="css"><label>css</label></p>
           <p><input type="checkbox" value="javascript"><label>javascript</label><input type="checkbox" value="php"><label>php</label></p>
-         <p><label>batch timing</label>
-         <input type="radio" value="10 to 12" name="time"><label>10 to 12</label>
-         <input type="radio" value="11 to 01" name="time"><label>11 to 01</label></p>
-         <p><input type="radio" value="02 to 04" name="time"><label>02 to 04</label>
-            <input type="radio" value="04 to 06" name="time"><label>04 to 06</label></p>
-         <p><input type="radio" value="06 to 08" name="time"><label>06 to 08</label>
-            <input type="radio" value="fasttrck" name="time"><label>fastrack</label></p>
+         <p><label>batch:</label>
+         <input checked type="radio" value="weekday" name="time"><label>weekday</label>
+         <input type="radio" value="weekend" name="time"><label>weekend</label></p>
+         <p><label>Batch timing:</label>
+            <select>
+                <option value="select" disabled selected>select</option>
+                <option value="10 to 12">10 to 12</option>
+                <option value="12 to 01">12 to 01</option>
+                <option value="02 to 04">02 to 04</option>
+                <option value="04 to 06">04 to 06</option>
+                <option value="06 to 08">06 to 08</option>
+                <option value="fastrack">fastrack</option>
+            </select>
+        </p>
          <p><input type="submit"><input type="reset"></p>
-         <p align="left">Feedback:</p>
-         <p align="left"><input type="text"><button>ok</button></p>
+         <p align="left"><label>Feedback:</label></p>
+        <p align="left"><textarea rows="8" cols="80" placeholder="please enter your feedback" style="width: 600px; height: 100px; resize: none;"></textarea></p>   
+
     </form>
 </body>
 </html>
