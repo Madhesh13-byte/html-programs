@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pgm 10</title>
+    <style>
+        .cell{
+            text-align: center;
+            background-color: blue;
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .container{
+            background-color: lightgreen;
+            font-size: 35px;
+            font-weight: 900;
+            text-align: center;
+        }
+        .heading{
+            background-color: orangered;
+            font-size: 30px;
+            font-weight: 900;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table align="center" height="800" width="900" style="resize: none;">
+        <tr>
+            <td colspan="5" class="heading">Heading</td>
+        </tr>
+        <tr>
+            <td rowspan="3" class="container">Container 1</td>
+            <td class="cell">cell 1</td>
+            <td colspan="2" class="cell">cell 2</td>
+            <td class="cell">cell 3</td>
+        </tr>
+        <tr>
+            <td class="cell">cell 1</td>
+            <td class="cell">cell 2</td>
+            <td class="cell">cell 3</td>
+            <td rowspan="2" class="cell">cell 4</td>
+        </tr>
+        <tr>
+            <td class="cell">cell 1</td>
+            <td class="cell">cell 2</td>
+            <td class="cell">cell 3</td>
+
+        </tr>
+        <tr>
+            <td rowspan="3" class="container">Container 2</td>
+            <td rowspan="2" class="cell">cell 1</td>
+            <td class="cell">cell 2</td>
+            <td class="cell">cell 3</td>
+            <td class="cell">cell 4</td>
+        </tr>
+        <tr>
+            <td class="cell">cell 2</td>
+            <td class="cell" colspan="2">cell 3</td>
+        </tr>
+        <tr>
+            <td class="cell" colspan="4">cell 1</td>
+        </tr>    
+
+    </table>
+</body>
+</html>
