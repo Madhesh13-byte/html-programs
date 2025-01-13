@@ -4,18 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
+    <style>
+        a{
+            margin-left: 50px;
+        }
+        a:first-child{
+            color: grey;
+        }
+        .google:first-child{
+            color: blue;
+        }
+        a:visited{
+            color:blueviolet;
+        }
+        .google1:visited{
+            color: blueviolet;
+        }
+        .forgotpass:visited{
+            color: yellow
+        }
+        a:hover{
+            /* color: green; */
+            background-color: chartreuse;
+            
+        }
+        .google2:hover{
+            /* color: green; */
+            background-color: chartreuse;
+        }
+
+    </style>
 </head>
 <body>
-    <form action="#" align="center">
-        <h1>login</h1>
+    <form action="#" method="post" align="center">
+        <div class="white">Login<div>
         <p><input type="text" placeholder="username" pattern="[a-zA-Z0-9]+" required></p>
         <p><input type="password" placeholder="password"></p>
-        <pre>                   <a href="pgm1.html" target="_blank">forgot password?</a></pre>
+        <div>                   <a href="pgm1.html" target="_blank" class="forgotpass">forgot password?</a></pre>
         <p><input type="submit" name="login"></p>
-        <p><a href="pgm1.html" target="_blank">google</a>     
-            <a href="pgm1.html" target="_blank" style="margin-left: 20px;">facebook</a>       
-           <a href="pgm1.html" target="_blank" style="margin-left: 20px;">twitter</a>      
-            <a href="pgm1.html" target="_blank" style="margin-left: 20px;">instagram</a>
+        <p><a href="pgm1.html" target="_blank" class="google google1 google2">google</a>     
+            <a href="pgm1.html" target="_blank">facebook</a>       
+           <a href="pgm1.html" target="_blank">twitter</a>      
+            <a href="pgm1.html" target="_blank">instagram</a>
         </p>
     </form>
 </body>
