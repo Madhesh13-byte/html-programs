@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pgm12</title>
+    <style>
+        .title {
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.75cm;
+            padding: 30px;
+            margin: 50px;
+            border-bottom: 2px solid white;
+             /* border-color: black;  */
+         } 
+
+        .margin {
+            margin: 20px;
+        }
+
+        div:first-child {
+            color: black;
+            font-weight: 600;
+
+        }
+
+        div>div>input:first-child {
+            width: 90%;
+            height: 0.65cm;
+        }
+
+        textarea {
+            width: 90%;
+            height: 2.5cm;
+            resize: none;
+        }
+        table{
+            padding: 0.75cm;
+            background-color: lightblue;
+        }
+
+
+
+        .register {
+            background-color: #c11c84;
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="background-color: palevioletred;">
+    <table  height="100%" width="40%" align="center"> 
+        <tr>
+            <td>
+                <div class="title">Student Registeration Form</div>
+                <form action="#" method="post">
+                    <div class="margin">
+                        <div>
+                            Name:
+                        </div>
+                        <div>
+                            <input type="text" pattern="[a-zA-z]+" placeholder="Name" required>
+                        </div>
+                    </div>
+                    <div class="margin">
+                        <div>
+                            Father's Name:
+                        </div>
+                        <div>
+                            <input type="text" pattern="[a-zA-z]+" placeholder="Father's Name:" required>
+                        </div>
+                    </div>
+
+                    <div class="margin">
+                        <div>
+                            Course:
+                        </div>
+                        <div>
+                            <select style="width: 90%; height: 0.75cm;">
+                                <option value="course" selected disabled><label>course</label></option>
+                                <option value="c"><label>c</label></option>
+                                <option value="c++"><label>c++</label></option>
+                                <option value="python"><label>python</label></option>
+                                <option value="java"><label>java</label></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="margin">
+                        <div>
+                            Gender:
+                        </div>
+                        <div style="display: flex; width: 5%;">
+                            <input type="radio" name="gender" value="Male" checked><label>Male</label>
+                            <input type="radio" name="gender" value="Female"><label>Female</label>
+                            <input type="radio" name="gender" value="Other"><label>Other</label>
+                        </div>
+                    </div>
+                    <div class="margin">
+                        <div>
+                            Phone:
+                        </div>
+                        <div>
+                            <input type="text" pattern="[0-9]+" placeholder="+91">
+                        </div>
+                    </div>
+                    <div class="margin">
+                        <div>
+                            Alternate Number:
+                        </div>
+                        <div>
+                            <input type="text" pattern="[0-9]+" placeholder="phone no.">
+                        </div>
+                    </div>
+                    <div class="margin">
+                        <div>
+                            Current Address:
+                        </div>
+                        <div>
+                            <textarea placeholder="Current Address"></textarea>
+                        </div>
+                    </div>
+                    <div class="margin">
+                        <div>
+                            Email:
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Enter Email">
+                        </div>
+                    </div>
+                    <div class="margin">
+                        <div>
+                            Password:
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Enter Password">
+                        </div>
+                    </div>
+                    <div class="margin">
+                        <div>
+                            Re-Type Password:
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Retype password">
+                        </div>
+                    </div>
+                    <div class="margin">
+                        <div>
+                            <input type="submit" value="Register" class="register">
+                        </div>
+                    </div>
+
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
