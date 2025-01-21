@@ -1,0 +1,164 @@
+.pacifico-regular {
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .poppins-medium {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(space-planet-science-night-generated-by-ai.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    font-family: "Poppins", serif;
+}
+
+.alignmentnav {
+    /* padding: 0; */
+    /* margin: 0; */
+    width: 61.5%;
+    height: 1.5cm;
+    padding: 25px 9px;
+    background-color: blueviolet;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 20%;
+    /* border-bottom: none; */
+}
+
+nav>ul {
+    /* background-color: black;  */
+    display: flex;
+    /* justify-content: space-evenly;  */
+
+}
+
+ul>li {
+    list-style: none;
+    padding: 10px;
+    margin-left: 45px;
+}
+
+li>a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+
+section {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 60%;
+    height: 15cm;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+    /* border-top: none; */
+    position: relative;
+    left: 20%;
+}
+
+section>div>img {
+    position: absolute;
+    height: 75%;
+    width: 35%;
+    /* background-color: blue; */
+    top: 2cm;
+    right: 1.5cm;
+    border-radius: 25%;
+}
+section>div>img:hover{
+    /* border: 3px solid transparent; */
+    box-shadow: 15px 15px 5px  rgba(255, 255, 255, 0.18);
+    height: 78%;
+    width: 38%;
+    transform: all 1.5s;
+}
+
+
+.sectionwordings {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    resize: none;
+    color: white;
+    padding-left: 20px;
+    padding-top: 90px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 15px;
+
+
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+    box-shadow: 10px 10px 5px gray;
+    border-radius: 25px;
+    /* border-radius: none; */
+    transition: all 1s;
+
+}
+
+svg {
+    height: 40px;
+    width: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 12px;
+    /* color: white; */
+}
+.sectionwordings h1{
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.sectionwordings span{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.sectionwordings span:hover{
+    color: #ffd700;
+}
+p svg:hover{
+    background-color: white;
+    border-radius: 50%;
+    transition:all 1.5s;
+}
+li>a:hover{
+    color: #39ff14;
+    transition: all 1s;
+}
+header svg{
+    background-color: transparent;
+    margin-bottom: 5px;
+}
