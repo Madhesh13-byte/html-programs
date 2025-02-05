@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pgm14</title>
+    <link rel="icon" type="img/png" size="100x100" href="tire.png">
+    <style>
+        .background{
+            position: relative;
+            background-image: url(https://media1.tenor.com/m/lN4vBkMnxSAAAAAC/nima1-nimakrmanji.gif);
+            background-size: 100%;
+            background-position: bottom;
+            width: 100%;
+            height: 60vh;
+            background-color: red;
+        }
+        .tire-container-back{
+            position: absolute;
+            bottom: 63px;
+            left: 50px;
+            width: 65px;
+            height: 65px;
+            background-color: blueviolet;
+            animation-name: tire;
+            animation-duration: .5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .tire-container-front{
+            position: absolute;
+            bottom: 63px;
+            right: 65px;
+            width: 65px;
+            height: 65px;
+            background-color: blueviolet;
+            animation-name: tire;
+            animation-duration: .5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .tire{
+            width: 65px;
+            height: 65px;
+            /* background-color: azure; */
+        }
+        @keyframes tire{
+            from{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .car-container{
+            position: absolute;
+            bottom: 0px;
+            scale:2;
+            width: 350px;
+            height: 250px;
+            animation-name: car;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            background-color: black;
+        }
+        @keyframes car{
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(500px);
+            }
+        }
+        .car{
+            position: absolute;
+            bottom: 0;
+            width: 350px;
+            /* filter: hue-rotate(75deg); */
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="background">
+
+    <div class="car-container">
+        <img src="—Pngtree—car car traffic cartoon car_3847398.png" alt="" class="car">
+    <div class="tire-container-back">
+        <img src="tire.png" class="tire">
+    </div>
+    <div class="tire-container-front">
+        <img src="tire.png" class="tire">
+    </div>
+    </div>
+</body>
+</html>
