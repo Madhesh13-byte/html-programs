@@ -6,14 +6,42 @@
     <title>pgm14</title>
     <link rel="icon" type="img/png" size="100x100" href="tire.png">
     <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
         .background{
             position: relative;
-            background-image: url(https://media1.tenor.com/m/lN4vBkMnxSAAAAAC/nima1-nimakrmanji.gif);
+            /* background-image: url(https://media1.tenor.com/m/lN4vBkMnxSAAAAAC/nima1-nimakrmanji.gif); */
             background-size: 100%;
             background-position: bottom;
             width: 100%;
-            height: 60vh;
-            background-color: red;
+            height: 80vh;
+            /* background-color: red; */
+        }
+        .buildinngs{
+            position: absolute;
+            width: 100%;
+            height: 50vh;
+            top: 0;
+            overflow: hidden;
+        }
+        @keyframes build{
+            0%{
+                transform: translateX(0) ;
+            }
+            100%{
+                transform: translateX(-50%) ;
+            }
+        }
+        .bulidings-img{
+            width: 50%;
+            object-fit: contain;
+        }
+        .align-bulidings{
+            display: flex;
+            animation: build 3s linear infinite both;
         }
         .tire-container-back{
             position: absolute;
@@ -21,7 +49,7 @@
             left: 50px;
             width: 65px;
             height: 65px;
-            background-color: blueviolet;
+            /* background-color: blueviolet; */
             animation-name: tire;
             animation-duration: .5s;
             animation-timing-function: linear;
@@ -33,7 +61,7 @@
             right: 65px;
             width: 65px;
             height: 65px;
-            background-color: blueviolet;
+            /* background-color: blueviolet; */
             animation-name: tire;
             animation-duration: .5s;
             animation-timing-function: linear;
@@ -55,14 +83,14 @@
         .car-container{
             position: absolute;
             bottom: 0px;
-            scale:2;
+            /* scale:1; */
             width: 350px;
             height: 250px;
             animation-name: car;
             animation-duration: 5s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
-            background-color: black;
+            /* background-color: black; */
         }
         @keyframes car{
             from{
@@ -83,7 +111,22 @@
 </head>
 <body>
     <div class="background">
-
+    <div class="buildinngs">
+       <div class="align-bulidings"> 
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/485/191/small_2x/flat-cartoon-side-view-of-high-rise-building-city-town-vector.jpg" class="bulidings-img" alt="buildinngs">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/485/191/small_2x/flat-cartoon-side-view-of-high-rise-building-city-town-vector.jpg" class="bulidings-img" alt="buildinngs">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/485/191/small_2x/flat-cartoon-side-view-of-high-rise-building-city-town-vector.jpg" class="bulidings-img" alt="buildinngs">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/485/191/small_2x/flat-cartoon-side-view-of-high-rise-building-city-town-vector.jpg" class="bulidings-img" alt="buildinngs">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/485/191/small_2x/flat-cartoon-side-view-of-high-rise-building-city-town-vector.jpg" class="bulidings-img" alt="buildinngs">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/485/191/small_2x/flat-cartoon-side-view-of-high-rise-building-city-town-vector.jpg" class="bulidings-img" alt="buildinngs">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/485/191/small_2x/flat-cartoon-side-view-of-high-rise-building-city-town-vector.jpg" class="bulidings-img" alt="buildinngs">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/485/191/small_2x/flat-cartoon-side-view-of-high-rise-building-city-town-vector.jpg" class="bulidings-img" alt="buildinngs">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/485/191/small_2x/flat-cartoon-side-view-of-high-rise-building-city-town-vector.jpg" class="bulidings-img" alt="buildinngs">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/485/191/small_2x/flat-cartoon-side-view-of-high-rise-building-city-town-vector.jpg" class="bulidings-img" alt="buildinngs">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/485/191/small_2x/flat-cartoon-side-view-of-high-rise-building-city-town-vector.jpg" class="bulidings-img" alt="buildinngs">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/485/191/small_2x/flat-cartoon-side-view-of-high-rise-building-city-town-vector.jpg" class="bulidings-img" alt="buildinngs">
+       </div> 
+    </div>
     <div class="car-container">
         <img src="—Pngtree—car car traffic cartoon car_3847398.png" alt="" class="car">
     <div class="tire-container-back">
