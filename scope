@@ -1,0 +1,52 @@
+  
+function scopeExample() {
+    if (true) {
+        var x = 10; // Function-scoped
+        let y = 20; // Block-scoped
+        const z = 30; // Block-scoped
+
+        console.log("Inside block: x =", x); // ✅ Accessible
+        console.log("Inside block: y =", y); // ✅ Accessible
+        console.log("Inside block: z =", z); // ✅ Accessible
+    }
+
+    console.log("Outside block: x =", x); // ✅ Accessible (function-scoped)
+    
+    try {
+        console.log("Outside block: y =", y); // ❌ ReferenceError (block-scoped)
+    } catch (error) {
+        console.log("Outside block: y is not accessible");
+    }
+
+    try {
+        console.log("Outside block: z =", z); // ❌ ReferenceError (block-scoped)
+    } catch (error) {
+        console.log("Outside block: z is not accessible");
+    }
+}
+
+scopeExample();
+
+function testScope() {
+    var a = 1; // Function-scoped
+    let b = 2; // Block-scoped
+    const c = 3; // Block-scoped
+
+    if (true) {
+        var a = 10; // ✅ Overwrites `a` (function-scoped)
+        let b = 20; // ✅ Creates a new `b` (block-scoped)
+        const c = 30; // ✅ Creates a new `c` (block-scoped)
+
+        console.log("Inside block:");
+        console.log("a =", a); // 10 (Same variable modified)
+        console.log("b =", b); // 20 (New block-scoped variable)
+        console.log("c =", c); // 30 (New block-scoped variable)
+    }
+
+    console.log("Outside block:");
+    console.log("a =", a); // 10 (Modified due to function scope)
+    console.log("b =", b); // 2 (Original `b`, since block variable is different)
+    console.log("c =", c); // 3 (Original `c`, since block variable is different)
+}
+
+testScope();
