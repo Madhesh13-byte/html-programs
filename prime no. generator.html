@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime no. generator</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            gap: 2rem;
+            /* background-color: aquamarine; */
+            height: 50vh;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            padding-left: 20px;
+            width: 80%;
+            border-radius: 35px;
+            height: 5vh;
+        }
+        button{
+            width: 45%;
+            height: 5vh;
+            border-radius: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" placeholder="enter a no." id="no">
+        <button id="prime">sumbit</button>
+        <p id="write"></p>
+    </div>
+    <script>
+
+        let s = document.getElementById("prime");
+        let b = document.getElementById("write")
+        let c = "";
+        s.addEventListener("click", function () {
+            // let s = document.getElementById("prime")
+            // s.addEventListener("click", prime());
+            document.getElementById("no").style.boxShadow="0px 0px 5px  #32CD32,0px 0px 15px  #32CD32,0px 0px 25px  #32CD32,"
+            let a = Number(document.getElementById("no").value);
+            let b = document.getElementById("write");
+            for (let i = 1; i <= a; i++) {
+                f = 1;
+                for (let j = 2; j <= i / 2; j++) {
+                    if (i % j == 0) {
+                        f = 0;
+                        break;
+                    }
+                }
+                if (f == 1) {
+                    c += i + " ";
+                }
+            }
+            b.innerHTML = c;
+        });
+
+
+    </script>
+</body>
+
+</html>
