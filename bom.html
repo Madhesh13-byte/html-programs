@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+    <style>
+        fieldset{
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            flex-direction: column;
+            border: 4px solid black;
+            /* background-color: blueviolet; */
+        }
+        legend{
+            font-size: 4rem;
+            text-transform: uppercase;
+            text-align: right;
+        }
+        button{
+            /* width: 25%; */
+            height: 5vh;
+            border-radius: 25px;
+            padding: 0 15px 0;
+            border: none;
+        }
+        p{
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+    <legend>Bom</legend>
+    <button id="screen">get screen properties</button>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+</fieldset>
+    <script>
+        let a = document.getElementById("screen");
+        a.addEventListener("click", function () {
+            let c=document.getElementsByTagName("p")[1];
+            let d=document.getElementsByTagName("p")[2];
+            let e=document.getElementsByTagName("p")[3];
+            let f=document.getElementsByTagName("p")[4];
+            let b=document.getElementsByTagName("p")[0];
+            b.innerHTML="avail height:"+" "+screen.availHeight+"\n";
+            c.innerHTML="avail width:"+" "+screen.availWidth+"\n";
+            d.innerHTML="color dept:"+" "+screen.colorDepth+"\n";
+            e.innerHTML="height:"+" "+screen.height+"\n";
+            f.innerHTML="width:"+" "+screen.width+"\n";
+        });
+    </script>
+</body>
+
+</html>
