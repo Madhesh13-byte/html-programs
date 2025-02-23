@@ -1,0 +1,143 @@
+.container {
+    height: 633px;
+    width: 86.5%;
+    /* background-color: yellow; */
+    position: relative;
+    /* left: 120px; */
+    top: 100%;
+
+}
+
+.img1 {
+    height: 300px;
+    width: 400px;
+    background-color: #F14A00;
+    position: absolute;
+    border: 5px solid red;
+    top: 14px;
+    /* box-shadow: 10px 20px 5px gray; */
+}
+
+.img2 {
+    height: 300px;
+    width: 400px;
+    background-color: #16404D;
+    position: absolute;
+    left: 450px;
+    border: 5px solid darkblue;
+    /* box-shadow: 10px 20px 5px gray; */
+}
+
+.img3 {
+    height: 300px;
+    width: 400px;
+    background-color: #6EC207;
+    position: absolute;
+    right: 0px;
+    border: 5px solid darkgreen;
+    border-top: none;
+    /* box-shadow: 10px 20px 5px gray; */
+}
+
+.img4 {
+    height: 300px;
+    width: 400px;
+    background-color: #16404D;
+    position: absolute;
+    bottom: 0px;
+    border: 5px solid darkblue;
+    /* box-shadow: 10px 20px 5px gray; */
+
+}
+
+.img6 {
+    height: 300px;
+    width: 400px;
+    background-color: #F14A00;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border: 5px solid red;
+    /* box-shadow: 10px 20px 5px gray; */
+
+}
+
+.img5 {
+    height: 300px;
+    width: 400px;
+    background-color: #6EC207;
+    position: absolute;
+    bottom: 0px;
+    left: 450px;
+    border: 5px solid darkgreen;
+    /* box-shadow: 10px 20px 5px gray;/ */
+
+}
+
+img {
+    height: 180px;
+    width: 240px;
+    position: absolute;
+    left: 20%;
+    top: 25px;
+}
+
+p {
+    position: absolute;
+    bottom: 20px;
+    left: 33%;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+img:hover {
+    width: 250px;
+    height: 190px;
+    border: 4px double white;
+    border-radius: 25%;
+    box-shadow: 30px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.img1:hover {
+    box-shadow: 30px 20px 5px rgba(0, 0, 0, 0.5);
+    height: 320px;
+    width: 420px;
+
+}
+
+.img2:hover {
+    box-shadow: 30px 20px 5px rgba(0, 0, 0, 0.5);
+    height: 320px;
+    width: 420px;
+}
+
+.img3:hover {
+    box-shadow: 30px 20px 5px rgba(0, 0, 0, 0.5);
+    height: 320px;
+    width: 420px;
+}
+
+.img4:hover {
+    box-shadow: 30px 20px 5px rgba(0, 0, 0, 0.5);
+    height: 320px;
+    width: 420px;
+}
+
+.img5:hover {
+    box-shadow: 30px 20px 5px rgba(0, 0, 0, 0.5);
+    height: 320px;
+    width: 420px;
+}
+
+.img6:hover{
+    box-shadow: 30px 20px 5px rgba(0, 0, 0, 0.5);
+    height: 320px;
+    width: 420px;
+}
+
+p:hover {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: white;
+    left: 25%;
+}
