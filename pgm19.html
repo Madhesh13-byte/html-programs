@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .class {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://t3.ftcdn.net/jpg/03/16/58/08/360_F_316580848_m7lZhhWQ43JrsEsBQQToJ8g73ALcv78Y.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form {
+            width: 35%;
+            /* height:45%; */
+            padding: 35px;
+            /* background-color: blueviolet; */
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(2.5px);
+            -webkit-backdrop-filter: blur(2.5px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        input,
+        button {
+            margin-left: 10%;
+            width: 75%;
+            height: 5vh;
+        }
+
+        p {
+            margin-left: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="class">
+        <div class="form">
+            <input type="text" pattern="[a-zA-Z]+" placeholder="NAME:" required id="name">
+            <p></p>
+            <input type="email" placeholder="EMAIL:" required>
+            <p></p>
+            <input type="password" placeholder="PASSWORD:" required>
+            <p></p>
+            <input type="password" placeholder="RENTER PASSWORD:" required>
+            <p></p>
+            <input type="text" pattern="[0-9]+" maxlength="10" placeholder="CONTACT:" required>
+            <p></p>
+            <button id="btn">button</button>
+        </div>
+    </div>
+    <script>
+        let btn = document.getElementById("btn");
+        let inp = document.getElementsByTagName("input");
+        let p = document.getElementsByTagName("p");
+        class Input {
+            fun() {
+                let inp = document.getElementsByTagName("input");
+                let p = document.getElementsByTagName("p");
+                let arr = ["name", "email", "password", "re enter password", "contact"];
+                for (let i = 0; i < 5; i++) {
+                    if (inp[i].value.length != 0) {
+                        p[i].innerHTML = "";
+
+                    }
+                    else {
+                        p[i].innerHTML = arr[i] + " " + "is not filled";
+                    }
+                }
+            }
+            pass() {
+                let inp = document.getElementsByTagName("input");
+                let p = document.getElementsByTagName("p");
+                if (inp[2].value.length != 0 && inp[3].value.length) {
+                    if (inp[2].value === inp[3].value) {
+                        p[2].innerHTML = "";
+                        p[3].innerHTML = "";
+                    }
+                    else {
+                        p[3].innerHTML = "pass is inncorrect"
+                    }
+                }
+                else {
+                    p[i].innerHTML = "pass is not filled";
+                }
+            }
+        }
+        let inpp = new Input();
+        btn.addEventListener("click", function () {
+            inpp.fun();
+            inpp.pass();
+        });
+    </script>
+</body>
+
+</html>
