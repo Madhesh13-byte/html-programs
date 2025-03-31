@@ -34,6 +34,11 @@
             width: 75%;
             height: 5vh;
         }
+        .bt{
+            background-color: blue;
+            color: white;
+
+        }
 
         p {
             margin-left: 10%;
@@ -48,55 +53,74 @@
             <p></p>
             <input type="email" placeholder="EMAIL:" required>
             <p></p>
-            <input type="password" placeholder="PASSWORD:" required>
-            <p></p>
-            <input type="password" placeholder="RENTER PASSWORD:" required>
-            <p></p>
+            <input type="password" placeholder="PASSWORD:" required id="pass">
+            <p id="p"></p>
+            <input type="password" placeholder="RENTER PASSWORD:" required id="rpass">
+            <p id="rp"></p>
             <input type="text" pattern="[0-9]+" maxlength="10" placeholder="CONTACT:" required>
             <p></p>
-            <button id="btn">button</button>
+            <button id="btn" class="bt">button</button>
         </div>
     </div>
     <script>
-        let btn = document.getElementById("btn");
-        let inp = document.getElementsByTagName("input");
-        let p = document.getElementsByTagName("p");
-        class Input {
-            fun() {
-                let inp = document.getElementsByTagName("input");
-                let p = document.getElementsByTagName("p");
-                let arr = ["name", "email", "password", "re enter password", "contact"];
-                for (let i = 0; i < 5; i++) {
-                    if (inp[i].value.length != 0) {
-                        p[i].innerHTML = "";
-
-                    }
-                    else {
-                        p[i].innerHTML = arr[i] + " " + "is not filled";
-                    }
-                }
-            }
-            pass() {
-                let inp = document.getElementsByTagName("input");
-                let p = document.getElementsByTagName("p");
-                if (inp[2].value.length != 0 && inp[3].value.length) {
-                    if (inp[2].value === inp[3].value) {
-                        p[2].innerHTML = "";
-                        p[3].innerHTML = "";
-                    }
-                    else {
-                        p[3].innerHTML = "pass is inncorrect"
-                    }
+        class Form {
+            is_empty(a) {
+                if (a.value.length != 0) {
+                    return true;
                 }
                 else {
-                    p[i].innerHTML = "pass is not filled";
+                    return false;
                 }
             }
+            pass_check(a, b) {
+                if (this.is_empty(a) && this.is_empty(b)) {
+                    if (a.value === b.value) {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+                return -1;
+            }
         }
-        let inpp = new Input();
+        let btn = document.getElementsByTagName("button")[0]
         btn.addEventListener("click", function () {
-            inpp.fun();
-            inpp.pass();
+            let a = document.getElementsByTagName("input");
+            let b=document.getElementsByTagName("p");
+            let obj = new Form();
+            let arr=["Name","Email","Pass","Re-enter-pass","contact"]
+            for (let i = 0; i < a.length; i++) {
+                console.log("inp:"+obj.is_empty(a[i]))
+                if (obj.is_empty(a[i])=== false) {
+                    b[i].innerHTML=arr[i]+" "+"is not filled";
+                    b[i].style.color="red";
+                }
+                else{
+                    b[i].innerHTML="";
+                }
+            }
+            let pass=document.getElementById("pass");
+            let rpass=document.getElementById("rpass");
+            let p=document.getElementById("p");
+            let rp=document.getElementById("rp");
+            let pas=obj.pass_check(pass,rpass);
+            if(pas === true)
+            {
+                p.innerHTML="";
+            }
+            else if(pas=== false)
+            {
+                rp.innerHTML="inncorrect pass";
+                rp.style.color="red"
+            }
+            else{
+                rp.innerHTML="re-pass should be filled";
+                p.innerHTML="pass should be filled";
+                p.style.color="red";
+                rp.style.color="red"
+            }
+            console.log(pas);
         });
     </script>
 </body>
